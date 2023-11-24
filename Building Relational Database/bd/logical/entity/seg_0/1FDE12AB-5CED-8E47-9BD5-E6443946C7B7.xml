@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1FDE12AB-5CED-8E47-9BD5-E6443946C7B7" name="Sintoma">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 00:00:53 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Sintoma" id="379944F6-A29A-8C55-48D3-69E28971802A">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 00:00:58 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Descricao" id="48261E25-1611-451D-0010-23087060B5EE">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 00:01:15 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Frequencia" id="E333E0D5-B842-4965-B6AB-E72C5885F8A5">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 00:35:33 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Intensidade" id="E0E4B1E6-B839-3DFE-B9EC-E5DC7338C9F1">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 00:35:48 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Status" id="12A730BA-B0BA-464D-1545-881812A99533">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 00:36:05 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Ciclo" id="80E5C928-58E7-B5A5-EA67-005E9F7C8192">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 00:06:48 UTC</createdTime>
+<generatorID>8B8A3557-8B10-F505-988A-345C13EAA6C2</generatorID>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<referedAttribute>FEF36264-7DB1-E956-9362-EAA37ACA4129</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="12E9DF88-B1A5-D29D-F9FE-2B76E1605EE5" name="Sintoma PK">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 00:01:15 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>379944F6-A29A-8C55-48D3-69E28971802A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

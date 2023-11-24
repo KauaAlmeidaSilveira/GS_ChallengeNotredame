@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="41BC577F-6D2A-529A-6349-849EE645C1B0" name="Conta">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-23 23:54:33 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Conta" id="FB4C49ED-4A4F-0209-6E46-0D162AB1E330">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-23 23:54:38 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Email" id="85EAAB03-BC64-2F63-316F-A74B3BFA7767">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-23 23:54:57 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Senha" id="91693C28-C9FE-8687-CA6A-09ED9BBABFBF">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-23 23:55:19 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Administrador" id="E6D29DF9-BBB7-AC46-A5F8-EE238FE1C5F8">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-23 23:55:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[TRUE or FALSE]]></commentInRDBMS>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CPF_Usuario" id="2D3FEF05-7A08-8B58-A5E0-467AE568FB2C">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 01:28:22 UTC</createdTime>
+<generatorID>B0678A89-556A-5848-7411-98F6DB379E08</generatorID>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<referedAttribute>F3451185-7905-23E9-547B-83CD79EDCC3A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F255607B-CBC9-5CA7-FA15-DA1BAA9A17B2" name="Conta PK">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-23 23:54:56 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FB4C49ED-4A4F-0209-6E46-0D162AB1E330</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

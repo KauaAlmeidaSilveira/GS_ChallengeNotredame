@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FB0312EC-6402-4F1C-8903-A0F17EC3D498" name="CicloMenstrual">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-23 23:57:26 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Ciclo" id="FEF36264-7DB1-E956-9362-EAA37ACA4129">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-23 23:57:45 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fase" id="D2474C1F-C917-DB47-EA89-F59C1D16F447">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 00:03:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[Inicio, meio e fim]]></commentInRDBMS>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AtividadeSexual" id="091F5D51-B4FF-7AAB-43EA-FAB442304BF7">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 00:03:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ativo, Parcial, Nenhuma...]]></commentInRDBMS>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MetodoContraceptivo" id="B806A372-8829-288F-B2FD-01E6C38147B5">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 00:05:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[Camisinha, anticoncepcional...]]></commentInRDBMS>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Conta" id="FFD1ED65-C75D-D964-E8E5-CA2331047582">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 00:29:09 UTC</createdTime>
+<generatorID>0D4F2545-980F-E613-83C3-7D613E9F5BD2</generatorID>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<referedAttribute>FB4C49ED-4A4F-0209-6E46-0D162AB1E330</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4CF4EBB5-A151-5434-B355-8528866CFF4C" name="CicloMenstrual PK">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-23 23:58:11 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FEF36264-7DB1-E956-9362-EAA37ACA4129</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

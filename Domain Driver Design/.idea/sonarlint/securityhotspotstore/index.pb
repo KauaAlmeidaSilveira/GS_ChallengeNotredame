@@ -55,8 +55,6 @@ G.idea/sonarlint/issuestore/b/d/bd79110a9a1c5811fe45d6a1ad87d2d8be8d2de0,a\7\a7
 Q.idea/sonarlint/securityhotspotstore/b/d/bd79110a9a1c5811fe45d6a1ad87d2d8be8d2de0,0\4\0449a9927a839344055f05bdb3e3ff2c44666747
 Å
 Q.idea/sonarlint/securityhotspotstore/e/a/ea1d711a89178d453b52c6ff7e348296a3cce928,9\4\94a98e4eccd6a181d772384aac137cc426a2730e
-G
-GS_Notredame/.gitignore,6\5\650677a11acfa464ec2be4f3c0f32f5fbdab799d
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

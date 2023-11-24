@@ -9,9 +9,7 @@ public class InstancesEntities {
     public static void main(String[] args) {
 
         /*
-
             === SCRIPT PARA POVOAR AS ENTIDADES ===
-
         */
 
         Repository repositorio = new Repository();

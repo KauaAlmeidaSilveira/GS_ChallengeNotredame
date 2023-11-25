@@ -67,6 +67,21 @@
 <dataTypeSize>100 CHAR</dataTypeSize>
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ID_Endereco" id="E7769F06-DEB8-895C-5DDB-19E75189DB6B">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 19:55:51 UTC</createdTime>
+<generatorID>0457DA42-8798-B802-EB8D-B8992A255C36</generatorID>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<referedAttribute>01480C04-31BF-FFA5-2D1D-680C61DD0CBA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="C7BC0251-2A5D-BD55-3E39-0C7F536BC0EE" name="GrupoDeApoio PK">

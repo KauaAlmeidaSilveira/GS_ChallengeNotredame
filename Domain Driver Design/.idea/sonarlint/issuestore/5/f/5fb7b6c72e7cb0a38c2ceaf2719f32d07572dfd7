@@ -1,4 +1,22 @@
 
-G
-java:S3457"%String contains no format specifiers.(‚ÈÎ­úÿÿÿÿ8¿€ìø¿1
-L	java:S106"+Replace this use of System.out by a logger.(‚ÈÎ­úÿÿÿÿ8¿€ìø¿1
+h
+java:S1192»"EDefine a constant instead of duplicating this literal "
+===" 6 times.(Öä»Øûÿÿÿÿ8¹†·À1
+q
+java:S1192ğ"SDefine a constant instead of duplicating this literal "Digite seu email: " 3 times.(ÉØ¤¥8¹†·À1
+z	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8¹†·À1
+{	java:S135„"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8Äª”·À1
+V
+java:S11721"9Remove these unused method parameters "sc", "repository".(’˜Ôæ8Ú¹†·À1
+d
+java:S1172h"BRemove these unused method parameters "sc", "repository", "conta".(´Ì±Àıÿÿÿÿ8Ú¹†·À1
+`
+java:S1172Ÿ"BRemove these unused method parameters "sc", "repository", "conta".(äÈá—8Ú¹†·À1
+u
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(äœ×şÿÿÿÿ8–«”·À1
+T
+java:S1144¹"1Remove this unused private "listarContas" method.(ª¥¥òúÿÿÿÿ8ş¹†·À1
+Q
+java:S1144Á"3Remove this unused private "listarUsuarios" method.(•’¾¶8ş¹†·À1
+W
+java:S1144É"4Remove this unused private "listarPostagens" method.(š‘‡şÿÿÿÿ8ş¹†·À1

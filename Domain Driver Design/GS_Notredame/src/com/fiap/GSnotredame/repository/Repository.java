@@ -16,6 +16,19 @@ public class Repository {
     private List<CicloMenstrual> ciclosMenstruais = new ArrayList<>();
     private List<Sintoma> sintomas = new ArrayList<>();
 
+    public Repository() {
+        // User padrao
+        Usuario user = new Usuario(16581465168L, "kaua", "masc", "nao");
+        usuarios.add(user);
+
+        // Conta padrão adm
+        contas.add(new Conta(111L, "adm@", "2011", "sim", user));
+
+        // Conta padrão sem adm
+        contas.add(new Conta(222L, "kaua@", "2011", "nao", user));
+
+    }
+
     public List<Conta> getContas() {
         return contas;
     }

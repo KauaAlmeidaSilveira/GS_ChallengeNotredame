@@ -7,18 +7,17 @@ public class Endereco {
     private String cidade;
     private String cep;
     private String pais;
-    private GrupoDeApoio grupoDeApoio;
+
 
     public Endereco() {
     }
 
-    public Endereco(long idEndereco, String rua, String cidade, String cep, String pais, GrupoDeApoio grupoDeApoio) {
+    public Endereco(long idEndereco, String rua, String cidade, String cep, String pais) {
         this.idEndereco = idEndereco;
         this.rua = rua;
         this.cidade = cidade;
         this.cep = cep;
         this.pais = pais;
-        this.grupoDeApoio = grupoDeApoio;
     }
 
     public long getIdEndereco() {
@@ -61,14 +60,6 @@ public class Endereco {
         this.pais = pais;
     }
 
-    public GrupoDeApoio getGrupoDeApoio() {
-        return grupoDeApoio;
-    }
-
-    public void setGrupoDeApoio(GrupoDeApoio grupoDeApoio) {
-        this.grupoDeApoio = grupoDeApoio;
-    }
-
     @Override
     public String toString() {
         return "Endereco\n" +
@@ -76,7 +67,6 @@ public class Endereco {
                 "Rua: " + rua + "\n" +
                 "Cidade: " + cidade + "\n" +
                 "CEP: " + cep + "\n" +
-                "País: " + pais + "\n" +
-                "Id do grupo que tem esse endereco: " + grupoDeApoio.getIdGrupoDeApoio();
+                "País: " + pais;
     }
 }

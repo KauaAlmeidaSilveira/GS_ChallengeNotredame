@@ -62,3 +62,17 @@ l
 <GS_Notredame/src/com/fiap/GSnotredame/InstancesEntities.java,a\9\a9f195a99631f766e477e2f7b0f03a4c11637588
 p
 @GS_Notredame/src/com/fiap/GSnotredame/repository/Repository.java,d\1\d1afe920cf5ce5fe2027c564c585bf8ae5461dc6
+o
+?GS_Notredame/src/com/fiap/GSnotredame/entities/associative.java,d\6\d6aada8e1927622c3442256649922f2a161e5336
+‚
+RGS_Notredame/src/com/fiap/GSnotredame/entities/associative/GrupoApoio_Usuario.java,e\6\e67fc59d5e2d95b4df46243b49bbae6165d0add3
+q
+AGS_Notredame/src/com/fiap/GSnotredame/entities/MarcaParceira.java,5\1\5151903a01c7c12c1d98c15b253b84497a6a2742
+w
+G.idea/sonarlint/issuestore/5/1/5151903a01c7c12c1d98c15b253b84497a6a2742,0\8\088c0eb0347ed5a2c5fd33e1ea5e741e07588655
+
+Q.idea/sonarlint/securityhotspotstore/e/6/e67fc59d5e2d95b4df46243b49bbae6165d0add3,5\8\584dbaee83047c80c920798945f909d9d8afe8d9
+
+Q.idea/sonarlint/securityhotspotstore/d/6/d6aada8e1927622c3442256649922f2a161e5336,4\5\4521b18a7b74ffea842a5334b05a51a7d30bf387
+
+Q.idea/sonarlint/securityhotspotstore/5/1/5151903a01c7c12c1d98c15b253b84497a6a2742,b\e\be59f7c944edb2394a1ea46a91db55c6ed380515

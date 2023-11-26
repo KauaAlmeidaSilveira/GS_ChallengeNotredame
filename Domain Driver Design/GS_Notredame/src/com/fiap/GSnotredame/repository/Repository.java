@@ -1,6 +1,7 @@
 package com.fiap.GSnotredame.repository;
 
 import com.fiap.GSnotredame.entities.*;
+import com.fiap.GSnotredame.entities.associative.GrupoApoio_Usuario;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,17 +9,21 @@ import java.util.List;
 public class Repository {
 
     private List<Conta> contas = new ArrayList<>();
-    private List<MarcasParceiras> marcasParceiras = new ArrayList<>();
+    private List<MarcaParceira> marcasParceiras = new ArrayList<>();
     private List<GrupoDeApoio> gruposDeApoio = new ArrayList<>();
     private List<Endereco> enderecos = new ArrayList<>();
     private List<Usuario> usuarios = new ArrayList<>();
     private List<Postagem> postagens = new ArrayList<>();
     private List<CicloMenstrual> ciclosMenstruais = new ArrayList<>();
     private List<Sintoma> sintomas = new ArrayList<>();
+    private List<GrupoApoio_Usuario> grupoApoio_usuarios = new ArrayList<>();
 
     public Repository() {
+        Endereco endereco = new Endereco(333L, "rua teste", "sp", "4532345", "BR");
+        enderecos.add(endereco);
+
         // User padrao
-        Usuario user = new Usuario(16581465168L, "kaua", "masc", "nao");
+        Usuario user = new Usuario(16581465168L, "kaua", "masc", "nao", endereco);
         usuarios.add(user);
 
         // Conta padrão adm
@@ -33,7 +38,7 @@ public class Repository {
         return contas;
     }
 
-    public List<MarcasParceiras> getMarcasParceiras() {
+    public List<MarcaParceira> getMarcasParceiras() {
         return marcasParceiras;
     }
 
@@ -61,11 +66,15 @@ public class Repository {
         return sintomas;
     }
 
+    public List<GrupoApoio_Usuario> getGrupoApoio_usuarios() {
+        return grupoApoio_usuarios;
+    }
+
     public void adicionarConta(Conta conta) {
         contas.add(conta);
     }
 
-    public void adicionarMarcasParceiras(MarcasParceiras marca) {
+    public void adicionarMarcasParceiras(MarcaParceira marca) {
         marcasParceiras.add(marca);
     }
 
@@ -91,6 +100,10 @@ public class Repository {
 
     public void adicionarSintoma(Sintoma sintoma) {
         sintomas.add(sintoma);
+    }
+
+    public void adcionarGrupoApoio_Usuario(GrupoApoio_Usuario grupoApoioUsuario){
+        grupoApoio_usuarios.add(grupoApoioUsuario);
     }
 
 }

@@ -6,15 +6,17 @@ public class Usuario {
     private String nome;
     private String genero;
     private String convenio;
+    private Endereco endereco;
 
     public Usuario() {
     }
 
-    public Usuario(long cpfUsuario, String nome, String genero, String convenio) {
+    public Usuario(long cpfUsuario, String nome, String genero, String convenio, Endereco endereco) {
         this.cpfUsuario = cpfUsuario;
         this.nome = nome;
         this.genero = genero;
         this.convenio = convenio;
+        this.endereco = endereco;
     }
 
     public long getCpfUsuario() {
@@ -49,12 +51,21 @@ public class Usuario {
         this.convenio = convenio;
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
     @Override
     public String toString() {
         return "Usuario\n" +
                 "CPF_Usuario: " + cpfUsuario + "\n" +
                 "Nome: " + nome + "\n" +
                 "Gênero: " + genero + "\n" +
-                "Convênio: " + convenio;
+                "Convênio: " + convenio + "\n" +
+                endereco;
     }
 }

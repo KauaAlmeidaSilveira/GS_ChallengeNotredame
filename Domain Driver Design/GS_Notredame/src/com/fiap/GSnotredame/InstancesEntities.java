@@ -10,7 +10,7 @@ public class InstancesEntities {
 
         /*
             === SCRIPT PARA POVOAR AS ENTIDADES ===
-        */
+        *//*
 
         Repository repositorio = new Repository();
 
@@ -23,8 +23,8 @@ public class InstancesEntities {
         repositorio.adicionarConta(conta1);
         repositorio.adicionarConta(conta2);
 
-        MarcasParceiras marca1 = new MarcasParceiras(1L, "Marca1", "ativo", "segmento1", "link1");
-        MarcasParceiras marca2 = new MarcasParceiras(2L, "Marca2", "inativo", "segmento2", "link2");
+        MarcaParceira marca1 = new MarcaParceira(1L, "Marca1", "ativo", "segmento1", "link1");
+        MarcaParceira marca2 = new MarcaParceira(2L, "Marca2", "inativo", "segmento2", "link2");
 
         repositorio.adicionarMarcasParceiras(marca1);
         repositorio.adicionarMarcasParceiras(marca2);
@@ -69,8 +69,8 @@ public class InstancesEntities {
         }
 
         System.out.println("\nMarcas Parceiras:");
-        List<MarcasParceiras> marcasParceiras = repositorio.getMarcasParceiras();
-        for (MarcasParceiras marca : marcasParceiras) {
+        List<MarcaParceira> marcasParceiras = repositorio.getMarcasParceiras();
+        for (MarcaParceira marca : marcasParceiras) {
             System.out.println(marca.toString()+"\n");
         }
 
@@ -109,7 +109,7 @@ public class InstancesEntities {
         for (Sintoma sintoma : sintomas) {
             System.out.println(sintoma.toString()+"\n");
         }
-
+*/
 
     }
 }

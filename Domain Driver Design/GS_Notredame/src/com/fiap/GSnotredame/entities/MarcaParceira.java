@@ -1,6 +1,6 @@
 package com.fiap.GSnotredame.entities;
 
-public class MarcasParceiras {
+public class MarcaParceira {
 
     private long idMarca;
     private String nome;
@@ -8,13 +8,13 @@ public class MarcasParceiras {
     private String segmento;
     private String link;
 
-    public MarcasParceiras() {
+    public MarcaParceira() {
     }
 
-    public MarcasParceiras(long idMarca, String nome, String statusParceria, String segmento, String link) {
+    public MarcaParceira(long idMarca, String nome, String segmento, String link) {
         this.idMarca = idMarca;
         this.nome = nome;
-        this.statusParceria = statusParceria;
+        this.statusParceria = "Ativo";
         this.segmento = segmento;
         this.link = link;
     }

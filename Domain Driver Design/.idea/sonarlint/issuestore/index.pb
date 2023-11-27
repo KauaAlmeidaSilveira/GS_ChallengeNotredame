@@ -56,9 +56,9 @@ Q.idea/sonarlint/securityhotspotstore/e/a/ea1d711a89178d453b52c6ff7e348296a3cce9
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 p
 @GS_Notredame/src/com/fiap/GSnotredame/repository/Repository.java,d\1\d1afe920cf5ce5fe2027c564c585bf8ae5461dc6
-n
->GS_Notredame/src/com/fiap/GSnotredame/application/Program.java,6\e\6e396904177e584d6fedfa59137f5777fe78062b
-x
-HGS_Notredame/src/com/fiap/GSnotredame/application/InstancesEntities.java,8\f\8fc5d4a8e002682eb9dc78fb6208a8cca399bec1
 ‚
 RGS_Notredame/src/com/fiap/GSnotredame/entities/associative/GrupoApoio_Usuario.java,e\6\e67fc59d5e2d95b4df46243b49bbae6165d0add3
+n
+>GS_Notredame/src/com/fiap/GSnotredame/application/Program.java,6\e\6e396904177e584d6fedfa59137f5777fe78062b
+q
+AGS_Notredame/src/com/fiap/GSnotredame/entities/MarcaParceira.java,5\1\5151903a01c7c12c1d98c15b253b84497a6a2742

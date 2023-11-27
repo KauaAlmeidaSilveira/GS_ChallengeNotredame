@@ -23,15 +23,7 @@ public class Program {
                 break;
 
             } else if (temConta.toUpperCase().charAt(0) == 'N') {
-                System.out.print("Deseja realizar um cadastro ? ");
-                String realizarCadastro = sc.nextLine();
-
-                if (realizarCadastro.toUpperCase().charAt(0) == 'S') {
-                    cadastrar(repository, sc);
-                } else {
-                    menu(sc, repository);
-                }
-
+                cadastrar(repository, sc);
                 break;
 
             } else {
@@ -44,61 +36,6 @@ public class Program {
         sc.close();
     }
 
-    private static void menu(Scanner sc, Repository repository) {
-        /*while (true) {
-            System.out.println("\nMenu:\n" +
-                    "1 - Login\n" +
-                    "2 - Cadastrar\n\n" +
-
-                    "3 - Realizar uma publicação\n\n" +
-
-                    "4 - Listar todos os usuarios\n" +
-                    "5 - Listar todas as contas\n" +
-                    "6 - Listar todas as publicações\n\n" +
-
-                    "7 - Sair");
-            System.out.print("Informe o que deseja fazer de acordo com o número das opções: ");
-            int opcao = sc.nextInt();
-            sc.nextLine();
-
-            if (opcao == 7) {
-                System.out.print("\nTudo bem, até a próxima! Bye");
-                break;
-            }
-
-            switch (opcao) {
-                case 1:
-                    login(repository, sc);
-                    break;
-
-                case 2:
-                    cadastrar(repository, sc);
-                    break;
-
-                case 3:
-                    realizarPostagem(repository, sc);
-
-                    break;
-
-                case 4:
-                    listarUsuarios(repository);
-                    break;
-
-                case 5:
-                    listarContas(repository);
-                    break;
-
-                case 6:
-                    listarPostagens(repository);
-                    break;
-
-                default:
-                    System.out.print("Opção não reconhecida");
-            }
-        }*/
-        System.out.println("MENU SEM CONTA");
-    }
-
     private static void menuConta(Scanner sc, Repository repository) {
         while (true) {
             System.out.println("\nMenu:\n" +
@@ -107,14 +44,14 @@ public class Program {
                     "3 - Participar de um grupo de apoio\n" +
                     "4 - Listar grupos de apoio que faço parte\n" +
                     "5 - Meus ciclos\n" +
+                    "6 - Hospital mais perto de mim\n" +
+                    "7 - Sair");
 
-
-                    "6 - Sair");
             System.out.print("Informe o que deseja fazer de acordo com o número das opções: ");
             int opcao = sc.nextInt();
             sc.nextLine();
 
-            if (opcao == 6) {
+            if (opcao == 7) {
                 System.out.print("\nTudo bem, até a próxima! Bye");
                 break;
             }
@@ -138,6 +75,10 @@ public class Program {
 
                 case 5:
                     repository.listarCiclosMentruaisConta(repository);
+                    break;
+
+                case 6:
+                    hospitalMaisPerto(repository);
                     break;
 
                 default:
@@ -320,6 +261,15 @@ public class Program {
         System.out.println("Cadastro realizado com sucesso !!\n");
 
         login(repository, sc);
+
+    }
+
+    private static void hospitalMaisPerto(Repository repository){
+
+        Endereco endereco = new Endereco(456L, "Rua Pedro Souza Alves 92", "São Paulo", "53394-083", "BR");
+
+        System.out.println("A partir do seu endereço, " + repository.getContaAtual().getUsuario().getEndereco().getRua() +
+                ", encontramos o hospital Ventura localizado no endereço, " + endereco.getRua());
 
     }
 

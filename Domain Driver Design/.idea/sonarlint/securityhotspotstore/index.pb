@@ -1,10 +1,6 @@
 
 i
 9GS_Notredame/src/com/fiap/GSnotredame/entities/Conta.java,3\3\33736ab9d4cb11cb0997e58af4528556419465cb
-b
-2GS_Notredame/src/com/fiap/GSnotredame/Program.java,5\f\5fb7b6c72e7cb0a38c2ceaf2719f32d07572dfd7
-s
-CGS_Notredame/src/com/fiap/GSnotredame/entities/MarcasParceiras.java,5\6\565e5acc6745b2188e8836936eebdb3069897f14
 p
 @GS_Notredame/src/com/fiap/GSnotredame/entities/GrupoDeApoio.java,b\d\bd79110a9a1c5811fe45d6a1ad87d2d8be8d2de0
 l
@@ -58,15 +54,11 @@ Q.idea/sonarlint/securityhotspotstore/e/a/ea1d711a89178d453b52c6ff7e348296a3cce9
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-l
-<GS_Notredame/src/com/fiap/GSnotredame/InstancesEntities.java,a\9\a9f195a99631f766e477e2f7b0f03a4c11637588
 p
 @GS_Notredame/src/com/fiap/GSnotredame/repository/Repository.java,d\1\d1afe920cf5ce5fe2027c564c585bf8ae5461dc6
 n
 >GS_Notredame/src/com/fiap/GSnotredame/application/Program.java,6\e\6e396904177e584d6fedfa59137f5777fe78062b
-o
-?GS_Notredame/src/com/fiap/GSnotredame/repository/functions.java,f\0\f0f4fe537d52c552955bdecb0487017d67b3798a
-o
-?GS_Notredame/src/com/fiap/GSnotredame/repository/Functions.java,4\9\4944292270d0bd7b8835e4b1ef0c3e577c23818e
 x
 HGS_Notredame/src/com/fiap/GSnotredame/application/InstancesEntities.java,8\f\8fc5d4a8e002682eb9dc78fb6208a8cca399bec1
+‚
+RGS_Notredame/src/com/fiap/GSnotredame/entities/associative/GrupoApoio_Usuario.java,e\6\e67fc59d5e2d95b4df46243b49bbae6165d0add3

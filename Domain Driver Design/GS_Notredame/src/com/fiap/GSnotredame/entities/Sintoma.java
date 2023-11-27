@@ -10,6 +10,8 @@ public class Sintoma {
     private CicloMenstrual cicloMenstrual;
 
     public Sintoma() {
+        this.setIdSintoma(1L);
+        this.status = "Presente";
     }
 
     public Sintoma(long idSintoma, String descricao, String frequencia, String intensidade, String status, CicloMenstrual cicloMenstrual) {
@@ -17,7 +19,7 @@ public class Sintoma {
         this.descricao = descricao;
         this.frequencia = frequencia;
         this.intensidade = intensidade;
-        this.status = status;
+        this.status = "Presente";
         this.cicloMenstrual = cicloMenstrual;
     }
 

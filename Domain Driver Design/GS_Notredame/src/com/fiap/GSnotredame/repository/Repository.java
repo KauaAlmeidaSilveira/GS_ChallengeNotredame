@@ -19,20 +19,22 @@ public class Repository {
     private List<Sintoma> sintomas = new ArrayList<>();
     private List<GrupoApoio_Usuario> grupoApoio_usuarios = new ArrayList<>();
 
+    private Conta contaAtual = null;
+
     public Repository() {
         // Endereco padrao
         Endereco endereco = new Endereco(333L, "rua teste", "sp", "4532345", "BR");
         enderecos.add(endereco);
 
-        // User padrao
-        Usuario user = new Usuario(16581465168L, "kaua", "masc", "nao", endereco);
-        usuarios.add(user);
+        Usuario user01 = new Usuario(16581465168L, "kaua", "masc", "nao", endereco);
+        Usuario user02 = new Usuario(35468541863L, "nary", "femi", "nao", endereco);
+        usuarios.addAll(List.of(user01, user02));
 
         // Conta padrao adm
-        contas.add(new Conta(111L, "adm@", "2011", "sim", user));
+        contas.add(new Conta(111L, "adm@", "2011", "sim", user01));
 
         // Conta padrao sem adm
-        contas.add(new Conta(222L, "kaua@", "2011", "nao", user));
+        contas.add(new Conta(222L, "nary@", "1807", "nao", user02));
 
         // Grupos de apoio
         GrupoDeApoio gpA_01 = new GrupoDeApoio(111L, "Casa 1", "11 98989-8958",
@@ -95,43 +97,117 @@ public class Repository {
         return grupoApoio_usuarios;
     }
 
-    public void adicionarConta(Conta conta) {
-        contas.add(conta);
+    public Conta getContaAtual() {
+        return contaAtual;
     }
 
-    public void adicionarMarcasParceiras(MarcaParceira marca) {
-        marcasParceiras.add(marca);
+    public void setContaAtual(Conta contaAtual) {
+        this.contaAtual = contaAtual;
     }
 
-    public void adicionarGrupoDeApoio(GrupoDeApoio grupo) {
-        gruposDeApoio.add(grupo);
+    // METODOS CONTA
+
+    public void inscreverEmGrupoApoio(Repository repository, Scanner sc) {
+
+        System.out.println("Grupos de apoio: ");
+
+        listarGruposDeApoio(repository);
+
+        System.out.print("Em qual deles deseja fazer parte ? (Digite somente o nome do grupo): ");
+        String nomeGrupo = sc.nextLine();
+
+        GrupoDeApoio grupoDeApoio = null;
+
+        for (GrupoDeApoio gpApoio : repository.getGruposDeApoio()) {
+            if (gpApoio.getNome().toUpperCase().trim().equals(nomeGrupo.toUpperCase().trim())) {
+                grupoDeApoio = gpApoio;
+            }
+        }
+
+        if (grupoDeApoio != null) {
+            if (contaAtual != null) {
+                GrupoApoio_Usuario grupoApoio_usuario = new GrupoApoio_Usuario(123L, grupoDeApoio, contaAtual.getUsuario());
+                repository.getGrupoApoio_usuarios().add(grupoApoio_usuario);
+
+                System.out.println("Agora você faz parte do grupo " + grupoDeApoio.getNome() + " !!");
+            } else {
+                System.out.println("Conta não encontrada !!");
+            }
+
+        } else {
+
+            System.out.println("Grupo não encontrado !!");
+
+        }
+
     }
 
-    public void adicionarEndereco(Endereco endereco) {
-        enderecos.add(endereco);
+    public void listarGruposApoioUsuario(Repository repository) {
+
+        repository.getGrupoApoio_usuarios().forEach(associacaoGpApoioUsuario -> {
+            if (associacaoGpApoioUsuario.getUsuario() == contaAtual.getUsuario()) {
+                System.out.println(associacaoGpApoioUsuario);
+            }
+        });
+
     }
 
-    public void adicionarUsuario(Usuario usuario) {
-        usuarios.add(usuario);
+    public void listarCiclosMentruaisConta(Repository repository) {
+        repository.getCiclosMenstruais().forEach(cicloMenstrual -> {
+            if (cicloMenstrual.getConta() == contaAtual) {
+                System.out.println("\n===");
+                System.out.println(cicloMenstrual);
+                System.out.println("\n===");
+            }
+        });
     }
 
-    public void adicionarPostagem(Postagem postagem) {
-        postagens.add(postagem);
+    public void adicionarCicloMenstrual(Repository repository, Scanner sc) {
+
+        System.out.print("Digite a fase no ciclo: ");
+        String fase = sc.nextLine();
+
+        System.out.print("Digite sobre sua atividade sexual: ");
+        String atividadeSexual = sc.nextLine();
+
+        System.out.print("Utiliza algum metodo contraceptivo ? (Sim/Não): ");
+        String metodoContraceptivo = sc.nextLine();
+
+        if (metodoContraceptivo.toUpperCase().charAt(0) == 'S'){
+            System.out.print("Qual metodo: ");
+            metodoContraceptivo = sc.nextLine();
+        }
+
+        CicloMenstrual cicloMenstrual = new CicloMenstrual(212L, fase, atividadeSexual, metodoContraceptivo, contaAtual);
+        repository.getCiclosMenstruais().add(cicloMenstrual);
+
+        System.out.print("Sente algum sintoma ? (Sim/Não): ");
+        String descricaoSintoma = sc.nextLine();
+
+        if (descricaoSintoma.toUpperCase().charAt(0) == 'S'){
+            Sintoma sintoma = new Sintoma();
+
+            System.out.print("Descreva o(s) sintoma: ");
+            sintoma.setDescricao(sc.nextLine());
+
+            System.out.print("Qual a frequência ? ");
+            sintoma.setFrequencia(sc.nextLine());
+
+            System.out.print("Qual a intensidade ? ");
+            sintoma.setIntensidade(sc.nextLine());
+
+            sintoma.setCicloMenstrual(cicloMenstrual);
+
+            repository.getSintomas().add(sintoma);
+
+            System.out.println("Ciclo cadastrado com sucesso !!");
+        }
+
     }
 
-    public void adicionarCicloMenstrual(CicloMenstrual ciclo) {
-        ciclosMenstruais.add(ciclo);
-    }
+    // METODOS CONTA ADM
 
-    public void adicionarSintoma(Sintoma sintoma) {
-        sintomas.add(sintoma);
-    }
-
-    public void adcionarGrupoApoio_Usuario(GrupoApoio_Usuario grupoApoioUsuario) {
-        grupoApoio_usuarios.add(grupoApoioUsuario);
-    }
-
-    public static Conta verificarContaExiste(Repository repository, String email) {
+    public Conta verificarContaExiste(Repository repository, String email) {
         for (Conta conta : repository.getContas()) {
             if (conta.getEmail().equals(email)) {
                 return conta;
@@ -140,7 +216,7 @@ public class Repository {
         return null;
     }
 
-    public static void listarContas(Repository repository) {
+    public void listarContas(Repository repository) {
         repository.getContas().forEach(conta -> {
             System.out.println("\n===");
             System.out.println(conta);
@@ -148,7 +224,17 @@ public class Repository {
         });
     }
 
-    public static void listarUsuarios(Repository repository) {
+    public void listarContasAdminstrativas(Repository repository) {
+        repository.getContas().forEach(conta -> {
+            if (conta.getAdministrador() == "sim") {
+                System.out.println("\n===");
+                System.out.println(conta);
+                System.out.println("\n===");
+            }
+        });
+    }
+
+    public void listarUsuarios(Repository repository) {
         repository.getUsuarios().forEach(usuario -> {
             System.out.println("\n===");
             System.out.println(usuario);
@@ -156,7 +242,7 @@ public class Repository {
         });
     }
 
-    public static void listarPostagens(Repository repository) {
+    public void listarPostagens(Repository repository) {
         repository.getPostagens().forEach(postagem -> {
             System.out.println("\n===");
             System.out.println(postagem);
@@ -164,7 +250,7 @@ public class Repository {
         });
     }
 
-    public static void listarMarcasParceiras(Repository repository) {
+    public void listarMarcasParceiras(Repository repository) {
         repository.getMarcasParceiras().forEach(marcaParceira -> {
             System.out.println("\n===");
             System.out.println(marcaParceira);
@@ -172,7 +258,7 @@ public class Repository {
         });
     }
 
-    public static void listarGruposDeApoio(Repository repository) {
+    public void listarGruposDeApoio(Repository repository) {
         repository.getGruposDeApoio().forEach(grupoDeApoio -> {
             System.out.println("\n===");
             System.out.println(grupoDeApoio);
@@ -180,12 +266,15 @@ public class Repository {
         });
     }
 
-    public static void realizarPostagem(Repository repository, Scanner sc) {
+    public void listarCiclosMentruais(Repository repository) {
+        repository.getCiclosMenstruais().forEach(cicloMenstrual -> {
+            System.out.println("\n===");
+            System.out.println(cicloMenstrual);
+            System.out.println("\n===");
+        });
+    }
 
-        System.out.print("Digite seu email: ");
-        String email = sc.nextLine();
-
-        Conta conta = verificarContaExiste(repository, email);
+    public void realizarPostagem(Repository repository, Scanner sc) {
 
         System.out.println("Vamos realizar uma publicação !");
 
@@ -210,14 +299,14 @@ public class Repository {
 
         System.out.println("Postagem publicada !!");
 
-        Postagem postagem = new Postagem(1L, titulo, descricao, texto, imagem, conta);
+        Postagem postagem = new Postagem(1L, titulo, descricao, texto, imagem, this.contaAtual);
 
-        repository.adicionarPostagem(postagem);
+        repository.getPostagens().add(postagem);
 
 
     }
 
-    public static void inserirGrupoDeApoio(Repository repository, Scanner sc) {
+    public void inserirGrupoDeApoio(Repository repository, Scanner sc) {
 
         System.out.print("Digite o nome do grupo: ");
         String nome = sc.nextLine();
@@ -249,14 +338,14 @@ public class Repository {
 
         GrupoDeApoio grupoDeApoio = new GrupoDeApoio(123L, nome, telefone, publicoAlvo, descricao, endereco);
 
-        repository.adicionarEndereco(endereco);
-        repository.adicionarGrupoDeApoio(grupoDeApoio);
+        repository.getEnderecos().add(endereco);
+        repository.getGruposDeApoio().add(grupoDeApoio);
 
-        System.out.print("Grupo cadastrado !!");
+        System.out.println("Grupo cadastrado !!");
 
     }
 
-    public static void registrarParceria(Repository repository, Scanner sc) {
+    public void registrarParceria(Repository repository, Scanner sc) {
 
         System.out.print("Digite o nome da marca parceira: ");
         String nome = sc.nextLine();
@@ -269,19 +358,15 @@ public class Repository {
 
         String link = null;
         if (temLink.toUpperCase().charAt(0) == 'S') {
-            System.out.println("Link: ");
+            System.out.print("Link: ");
             link = sc.nextLine();
         }
 
         MarcaParceira marcaParceira = new MarcaParceira(45L, nome, segmento, link);
 
-        repository.adicionarMarcasParceiras(marcaParceira);
+        repository.getMarcasParceiras().add(marcaParceira);
 
         System.out.println("Marca registrada !!");
-
-    }
-
-    public static void inscreverEmGrupoApoio(Repository repository, Scanner sc) {
 
     }
 

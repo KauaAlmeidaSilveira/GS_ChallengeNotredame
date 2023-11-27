@@ -99,62 +99,54 @@ public class Program {
         System.out.println("MENU SEM CONTA");
     }
 
-    private static void menuConta(Scanner sc, Repository repository, Conta conta) {
-        /*while (true) {
-                System.out.println("\nMenu:\n" +
-                        "1 - Login\n" +
-                        "2 - Cadastrar\n\n" +
+    private static void menuConta(Scanner sc, Repository repository) {
+        while (true) {
+            System.out.println("\nMenu:\n" +
+                    "1 - Adicionar um ciclo menstrual\n" +
+                    "2 - Mostrar os grupos de apoio\n" +
+                    "3 - Participar de um grupo de apoio\n" +
+                    "4 - Listar grupos de apoio que faço parte\n" +
+                    "5 - Meus ciclos\n" +
 
-                        "3 - Realizar uma publicação\n\n" +
 
-                        "4 - Listar todos os usuarios\n" +
-                        "5 - Listar todas as contas\n" +
-                        "6 - Listar todas as publicações\n\n" +
+                    "6 - Sair");
+            System.out.print("Informe o que deseja fazer de acordo com o número das opções: ");
+            int opcao = sc.nextInt();
+            sc.nextLine();
 
-                        "7 - Sair");
-                System.out.print("Informe o que deseja fazer de acordo com o número das opções: ");
-                int opcao = sc.nextInt();
-                sc.nextLine();
+            if (opcao == 6) {
+                System.out.print("\nTudo bem, até a próxima! Bye");
+                break;
+            }
 
-                if (opcao == 7) {
-                    System.out.print("\nTudo bem, até a próxima! Bye");
+            switch (opcao) {
+                case 1:
+                    repository.adicionarCicloMenstrual(repository, sc);
                     break;
-                }
 
-                switch (opcao) {
-                    case 1:
-                        login(repository, sc);
-                        break;
+                case 2:
+                    repository.listarGruposDeApoio(repository);
+                    break;
 
-                    case 2:
-                        cadastrar(repository, sc);
-                        break;
+                case 3:
+                    repository.inscreverEmGrupoApoio(repository, sc);
+                    break;
 
-                    case 3:
-                        realizarPostagem(repository, sc);
+                case 4:
+                    repository.listarGruposApoioUsuario(repository);
+                    break;
 
-                        break;
+                case 5:
+                    repository.listarCiclosMentruaisConta(repository);
+                    break;
 
-                    case 4:
-                        listarUsuarios(repository);
-                        break;
-
-                    case 5:
-                        listarContas(repository);
-                        break;
-
-                    case 6:
-                        listarPostagens(repository);
-                        break;
-
-                    default:
-                        System.out.print("Opção não reconhecida");
-                }
-        }*/
-        System.out.println("MENU COM CONTA SEM ADM");
+                default:
+                    System.out.print("Opção não reconhecida");
+            }
+        }
     }
 
-    private static void menuContaADM(Scanner sc, Repository repository, Conta conta) {
+    private static void menuContaADM(Scanner sc, Repository repository) {
         while (true) {
             System.out.println("\nMenu:\n" +
                     "1 - Realizar uma publicação\n" +
@@ -162,57 +154,62 @@ public class Program {
                     "3 - Registrar nova marca parceira\n" +
                     "4 - Listar todas os postagens\n" +
                     "5 - Listar todos os grupos de apoio\n" +
-                    "6 - Listar todas as marcas parceiras\n\n" +
+                    "6 - Listar todas as marcas parceiras\n" +
+                    "7 - Inserir um novo grupo de apoio\n\n" +
 
-                    "7 - Listar todos os usuarios\n" +
-                    "8 - Listar todas as contas\n" +
-                    "9 - Listar todas as contas administrativas\n" +
+                    "8 - Listar todos os usuarios\n" +
+                    "9 - Listar todas as contas\n" +
+                    "10 - Listar todas as contas administrativas\n" +
 
-                    "10 - Sair");
+                    "11 - Sair");
             System.out.print("Informe o que deseja fazer de acordo com o número das opções: ");
             int opcao = sc.nextInt();
             sc.nextLine();
 
-            if (opcao == 10) {
+            if (opcao == 11) {
                 System.out.print("\nTudo bem, até a próxima! Bye");
                 break;
             }
 
             switch (opcao) {
                 case 1:
-                    Repository.realizarPostagem(repository, sc);
+                    repository.realizarPostagem(repository, sc);
                     break;
 
                 case 2:
-                    Repository.inserirGrupoDeApoio(repository, sc);
+                    repository.inserirGrupoDeApoio(repository, sc);
                     break;
 
                 case 3:
-                    Repository.registrarParceria(repository, sc);
+                    repository.registrarParceria(repository, sc);
                     break;
 
                 case 4:
-                    Repository.listarPostagens(repository);
+                    repository.listarPostagens(repository);
                     break;
 
                 case 5:
-                    Repository.listarGruposDeApoio(repository);
+                    repository.listarGruposDeApoio(repository);
                     break;
 
                 case 6:
-                    Repository.listarMarcasParceiras(repository);
+                    repository.listarMarcasParceiras(repository);
                     break;
 
                 case 7:
-                    Repository.listarUsuarios(repository);
+                    repository.listarCiclosMentruais(repository);
                     break;
 
                 case 8:
-                    Repository.listarContas(repository);
+                    repository.listarUsuarios(repository);
                     break;
 
                 case 9:
-                    System.out.println("LISTAR CONTAS ADMINISTRATIVAS");
+                    repository.listarContas(repository);
+                    break;
+
+                case 10:
+                    repository.listarContasAdminstrativas(repository);
                     break;
 
                 default:
@@ -222,6 +219,8 @@ public class Program {
     }
 
     private static void login(Repository repository, Scanner sc) {
+
+
         System.out.println("\n=== Login ===");
 
         while (true) {
@@ -229,7 +228,7 @@ public class Program {
             System.out.print("Digite seu email: ");
             String email = sc.nextLine();
 
-            Conta conta = Repository.verificarContaExiste(repository, email);
+            Conta conta = repository.verificarContaExiste(repository, email);
 
             if (conta != null) {
 
@@ -237,11 +236,12 @@ public class Program {
                 String senha = sc.nextLine();
 
                 if (conta.getSenha().equals(senha)) {
+                    repository.setContaAtual(conta);
                     System.out.println("\nLogin realizado com sucesso !!");
                     if (conta.getAdministrador().toUpperCase().charAt(0) == 'S') {
-                        menuContaADM(sc, repository, conta);
+                        menuContaADM(sc, repository);
                     } else {
-                        menuConta(sc, repository, conta);
+                        menuConta(sc, repository);
                     }
                     break;
                 } else {
@@ -252,9 +252,9 @@ public class Program {
                         if (conta.getSenha().equals(senha)) {
                             System.out.println("\nLogin realizado com sucesso !!");
                             if (conta.getAdministrador().toUpperCase().charAt(0) == 'S') {
-                                menuContaADM(sc, repository, conta);
+                                menuContaADM(sc, repository);
                             } else {
-                                menuConta(sc, repository, conta);
+                                menuConta(sc, repository);
                             }
                             break;
                         }
@@ -314,8 +314,8 @@ public class Program {
 
         Conta conta = new Conta(1L, email, senha, "nao", usuario);
 
-        repository.adicionarUsuario(usuario);
-        repository.adicionarConta(conta);
+        repository.getUsuarios().add(usuario);
+        repository.getContas().add(conta);
 
         System.out.println("Cadastro realizado com sucesso !!\n");
 

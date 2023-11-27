@@ -1,13 +1,13 @@
 
 i
-java:S1192‘"FDefine a constant instead of duplicating this literal "
-===" 10 times.(Öä»Øûÿÿÿÿ8‹¨ˆ‰Á1
-r	java:S117&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñºçÆşÿÿÿÿ8Œ¨ˆ‰Á1
-m	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉĞ¶¡8Œ¨ˆ‰Á1
-r	java:S1172"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØïÜøÿÿÿÿ8¨ˆ‰Á1
-m	java:S1178"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ÃìÙ8Ô¶Š‰Á1
-z	java:S116"^Rename this field "grupoApoio_usuarios" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–’ºæ8¯¨ˆ‰Á1
-¤
-java:S1186œ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷Ö°²üÿÿÿÿ8õ¿Ÿ‰Á1
-o	java:S100^"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼—‚õûÿÿÿÿ8¾¨ˆ‰Á1
-k	java:S100‚"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¹Ô„8Á¨ˆ‰Á1
+java:S1192"FDefine a constant instead of duplicating this literal "
+===" 16 times.(Öä»Øûÿÿÿÿ8öéó’Á1
+r	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñºçÆşÿÿÿÿ8÷éó’Á1
+m	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉĞ¶¡8÷éó’Á1
+r	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØïÜøÿÿÿÿ8÷éó’Á1
+m	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ÃìÙ8÷éó’Á1
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÚµš8÷éó’Á1
+Z
+java:S4973å"<Strings and Boxed types should be compared using "equals()".(ÈØ±Î8ûéó’Á1
+z	java:S116"^Rename this field "grupoApoio_usuarios" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–’ºæ8—êó’Á1
+o	java:S100`"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼—‚õûÿÿÿÿ8¢êó’Á1

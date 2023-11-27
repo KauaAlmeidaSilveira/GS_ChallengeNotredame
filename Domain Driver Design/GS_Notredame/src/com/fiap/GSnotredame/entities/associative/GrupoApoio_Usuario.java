@@ -13,11 +13,11 @@ public class GrupoApoio_Usuario {
     public GrupoApoio_Usuario() {
     }
 
-    public GrupoApoio_Usuario(Long ID_GrupoApoioUsuario, GrupoDeApoio grupoDeApoio, Usuario usuario, String status) {
+    public GrupoApoio_Usuario(Long ID_GrupoApoioUsuario, GrupoDeApoio grupoDeApoio, Usuario usuario) {
         this.ID_GrupoApoioUsuario = ID_GrupoApoioUsuario;
         this.grupoDeApoio = grupoDeApoio;
         this.usuario = usuario;
-        this.status = status;
+        this.status = "PARTICIPANDO";
     }
 
     public Long getID_GrupoApoioUsuario() {

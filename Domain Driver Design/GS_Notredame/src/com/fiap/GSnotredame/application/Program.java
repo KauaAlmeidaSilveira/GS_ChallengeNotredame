@@ -1,4 +1,4 @@
-package com.fiap.GSnotredame;
+package com.fiap.GSnotredame.application;
 
 import com.fiap.GSnotredame.entities.*;
 import com.fiap.GSnotredame.repository.Repository;
@@ -180,35 +180,35 @@ public class Program {
 
             switch (opcao) {
                 case 1:
-                    realizarPostagem(repository, sc);
+                    Repository.realizarPostagem(repository, sc);
                     break;
 
                 case 2:
-                    inserirGrupoDeApoio(repository, sc);
+                    Repository.inserirGrupoDeApoio(repository, sc);
                     break;
 
                 case 3:
-                    registrarParceria(repository, sc);
+                    Repository.registrarParceria(repository, sc);
                     break;
 
                 case 4:
-                    listarPostagens(repository);
+                    Repository.listarPostagens(repository);
                     break;
 
                 case 5:
-                    listarGruposDeApoio(repository);
+                    Repository.listarGruposDeApoio(repository);
                     break;
 
                 case 6:
-                    listarMarcasParceiras(repository);
+                    Repository.listarMarcasParceiras(repository);
                     break;
 
                 case 7:
-                    listarUsuarios(repository);
+                    Repository.listarUsuarios(repository);
                     break;
 
                 case 8:
-                    listarContas(repository);
+                    Repository.listarContas(repository);
                     break;
 
                 case 9:
@@ -217,6 +217,53 @@ public class Program {
 
                 default:
                     System.out.print("Opção não reconhecida");
+            }
+        }
+    }
+
+    private static void login(Repository repository, Scanner sc) {
+        System.out.println("\n=== Login ===");
+
+        while (true) {
+
+            System.out.print("Digite seu email: ");
+            String email = sc.nextLine();
+
+            Conta conta = Repository.verificarContaExiste(repository, email);
+
+            if (conta != null) {
+
+                System.out.print("Digite sua senha: ");
+                String senha = sc.nextLine();
+
+                if (conta.getSenha().equals(senha)) {
+                    System.out.println("\nLogin realizado com sucesso !!");
+                    if (conta.getAdministrador().toUpperCase().charAt(0) == 'S') {
+                        menuContaADM(sc, repository, conta);
+                    } else {
+                        menuConta(sc, repository, conta);
+                    }
+                    break;
+                } else {
+                    while (true) {
+                        System.out.print("Digite sua senha novamente: ");
+                        senha = sc.nextLine();
+
+                        if (conta.getSenha().equals(senha)) {
+                            System.out.println("\nLogin realizado com sucesso !!");
+                            if (conta.getAdministrador().toUpperCase().charAt(0) == 'S') {
+                                menuContaADM(sc, repository, conta);
+                            } else {
+                                menuConta(sc, repository, conta);
+                            }
+                            break;
+                        }
+                    }
+                    break;
+                }
+
+            } else {
+                System.out.println("\nCadastro não encontrado. Tente novamente !");
             }
         }
     }
@@ -273,203 +320,6 @@ public class Program {
         System.out.println("Cadastro realizado com sucesso !!\n");
 
         login(repository, sc);
-
-    }
-
-    private static void login(Repository repository, Scanner sc) {
-        System.out.println("\n=== Login ===");
-
-        while (true) {
-
-            System.out.print("Digite seu email: ");
-            String email = sc.nextLine();
-
-            Conta conta = verificarContaExiste(repository, email);
-
-            if (conta != null) {
-
-                System.out.print("Digite sua senha: ");
-                String senha = sc.nextLine();
-
-                if (conta.getSenha().equals(senha)) {
-                    System.out.println("\nLogin realizado com sucesso !!");
-                    if (conta.getAdministrador().toUpperCase().charAt(0) == 'S') {
-                        menuContaADM(sc, repository, conta);
-                    } else {
-                        menuConta(sc, repository, conta);
-                    }
-                    break;
-                } else {
-                    while (true) {
-                        System.out.print("Digite sua senha novamente: ");
-                        senha = sc.nextLine();
-
-                        if (conta.getSenha().equals(senha)) {
-                            System.out.println("\nLogin realizado com sucesso !!");
-                            if (conta.getAdministrador().toUpperCase().charAt(0) == 'S') {
-                                menuContaADM(sc, repository, conta);
-                            } else {
-                                menuConta(sc, repository, conta);
-                            }
-                            break;
-                        }
-                    }
-                    break;
-                }
-
-            } else {
-                System.out.println("\nCadastro não encontrado. Tente novamente !");
-            }
-        }
-    }
-
-    public static Conta verificarContaExiste(Repository repository, String email) {
-        for (Conta conta : repository.getContas()) {
-            if (conta.getEmail().equals(email)) {
-                return conta;
-            }
-        }
-        return null;
-    }
-
-    private static void listarContas(Repository repository) {
-        repository.getContas().forEach(conta -> {
-            System.out.println("\n===");
-            System.out.println(conta);
-            System.out.println("\n===");
-        });
-    }
-
-    private static void listarUsuarios(Repository repository) {
-        repository.getUsuarios().forEach(usuario -> {
-            System.out.println("\n===");
-            System.out.println(usuario);
-            System.out.println("\n===");
-        });
-    }
-
-    private static void listarPostagens(Repository repository) {
-        repository.getPostagens().forEach(postagem -> {
-            System.out.println("\n===");
-            System.out.println(postagem);
-            System.out.println("\n===");
-        });
-    }
-
-    private static void listarMarcasParceiras(Repository repository) {
-        repository.getMarcasParceiras().forEach(marcaParceira -> {
-            System.out.println("\n===");
-            System.out.println(marcaParceira);
-            System.out.println("\n===");
-        });
-    }
-
-    private static void listarGruposDeApoio(Repository repository) {
-        repository.getGruposDeApoio().forEach(grupoDeApoio -> {
-            System.out.println("\n===");
-            System.out.println(grupoDeApoio);
-            System.out.println("\n===");
-        });
-    }
-
-    public static void realizarPostagem(Repository repository, Scanner sc) {
-
-        System.out.print("Digite seu email: ");
-        String email = sc.nextLine();
-
-        Conta conta = verificarContaExiste(repository, email);
-
-        System.out.println("Vamos realizar uma publicação !");
-
-        System.out.print("Qual o título da sua postagem ? ");
-        String titulo = sc.nextLine();
-
-        System.out.print("Digite a descrição: ");
-        String descricao = sc.nextLine();
-
-        System.out.print("Digite o texto da sua postagem: ");
-        String texto = sc.nextLine();
-
-        System.out.print("Possui imagem (Sim/Não)? ");
-        String imagem = sc.nextLine();
-
-        if (imagem.toUpperCase().charAt(0) == 'S') {
-            System.out.println("Digite o link: ");
-            imagem = sc.nextLine();
-        } else {
-            imagem = null;
-        }
-
-        System.out.println("Postagem publicada !!");
-
-        Postagem postagem = new Postagem(1L, titulo, descricao, texto, imagem, conta);
-
-        repository.adicionarPostagem(postagem);
-
-
-    }
-
-    public static void inserirGrupoDeApoio(Repository repository, Scanner sc) {
-
-        System.out.print("Digite o nome do grupo: ");
-        String nome = sc.nextLine();
-
-        System.out.print("Digite o telefone do grupo: ");
-        String telefone = sc.nextLine();
-
-        System.out.print("Digite o publico alvo: ");
-        String publicoAlvo = sc.nextLine();
-
-        System.out.print("Digite a descrição do grupo: ");
-        String descricao = sc.nextLine();
-
-        System.out.println("Sobre o endereço do grupo !!");
-
-        System.out.print("Digite a rua: ");
-        String rua = sc.nextLine();
-
-        System.out.print("Digite a cidade: ");
-        String cidade = sc.nextLine();
-
-        System.out.print("Digite o CEP: ");
-        String cep = sc.nextLine();
-
-        System.out.print("Digite o país: ");
-        String pais = sc.nextLine();
-
-        Endereco endereco = new Endereco(323L, rua, cidade, cep, pais);
-
-        GrupoDeApoio grupoDeApoio = new GrupoDeApoio(123L, nome, telefone, publicoAlvo, descricao, endereco);
-
-        repository.adicionarEndereco(endereco);
-        repository.adicionarGrupoDeApoio(grupoDeApoio);
-
-        System.out.print("Grupo cadastrado !!");
-
-    }
-
-    public static void registrarParceria(Repository repository, Scanner sc) {
-
-        System.out.print("Digite o nome da marca parceira: ");
-        String nome = sc.nextLine();
-
-        System.out.print("Digite o segmento da marca: ");
-        String segmento = sc.nextLine();
-
-        System.out.print("Tem o link, do site ou rede social, da marca ? (Sim/Não): ");
-        String temLink = sc.nextLine();
-
-        String link = null;
-        if (temLink.toUpperCase().charAt(0) == 'S') {
-            System.out.println("Link: ");
-            link = sc.nextLine();
-        }
-
-        MarcaParceira marcaParceira = new MarcaParceira(45L, nome, segmento, link);
-
-        repository.adicionarMarcasParceiras(marcaParceira);
-
-        System.out.println("Marca registrada !!");
 
     }
 

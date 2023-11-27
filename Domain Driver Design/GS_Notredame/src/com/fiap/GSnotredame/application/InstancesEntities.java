@@ -1,4 +1,4 @@
-package com.fiap.GSnotredame;
+package com.fiap.GSnotredame.application;
 
 import com.fiap.GSnotredame.entities.*;
 import com.fiap.GSnotredame.repository.Repository;

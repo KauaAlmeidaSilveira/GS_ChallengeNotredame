@@ -1,5 +1,7 @@
 # CareCicle
-## Saúde Inclusiva, aplicação dedicada a oferecer cuidados de saúde personalizados para pessoas LGBTQIA+.
+
+### Saúde Inclusiva, aplicação dedicada a oferecer cuidados de saúde personalizados para pessoas LGBTQIA+.
+### Obs: Acesse a pasta Domain Driver Design
 
 ## Visão Geral
 

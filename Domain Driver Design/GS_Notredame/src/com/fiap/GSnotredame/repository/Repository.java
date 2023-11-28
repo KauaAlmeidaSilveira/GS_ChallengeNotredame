@@ -160,6 +160,14 @@ public class Repository {
                 System.out.println("\n===");
             }
         });
+
+        repository.getSintomas().forEach(sintoma -> {
+            if(sintoma.getCicloMenstrual().getConta() == contaAtual){
+                System.out.println("\n===");
+                System.out.println(sintoma);
+                System.out.println("\n===");
+            }
+        });
     }
 
     public void adicionarCicloMenstrual(Repository repository, Scanner sc) {

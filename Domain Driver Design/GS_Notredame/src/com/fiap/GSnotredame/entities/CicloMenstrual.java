@@ -63,7 +63,7 @@ public class CicloMenstrual {
 
     @Override
     public String toString() {
-        return "CicloMenstrual\n" +
+        return "CicloMenstrual: " + conta.getUsuario().getNome() + "\n" +
                 "ID_Ciclo: " + idCiclo + "\n" +
                 "Fase: " + fase + "\n" +
                 "Atividade Sexual: " + atividadeSexual + "\n" +

@@ -54,9 +54,10 @@ public class GrupoApoio_Usuario {
 
     @Override
     public String toString() {
-        return "GrupoApoio_Usuario\n" +
-                "GrupoDeApoio: " + grupoDeApoio.getNome() + "\n" +
-                "Usuario:" + usuario.getCpfUsuario() + "\n" +
+        return "\nGrupoDeApoio: " + grupoDeApoio.getNome() + "\n" +
+                "Usuario:" + usuario.getNome() + "\n" +
+                "Id do grupo: " + grupoDeApoio.getIdGrupoDeApoio() + "\n" +
+                "Id do Usuario:" + usuario.getCpfUsuario() + "\n" +
                 "Status: " + status;
     }
 }

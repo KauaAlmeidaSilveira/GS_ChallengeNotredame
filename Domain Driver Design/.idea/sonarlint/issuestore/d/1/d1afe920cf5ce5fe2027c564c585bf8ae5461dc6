@@ -1,74 +1,13 @@
 
 i
 java:S1192"FDefine a constant instead of duplicating this literal "
-===" 16 times.(Öä»Øûÿÿÿÿ8öéó’Á1
-r	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñºçÆşÿÿÿÿ8÷éó’Á1
-m	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉĞ¶¡8÷éó’Á1
-r	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØïÜøÿÿÿÿ8÷éó’Á1
-m	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ÃìÙ8÷éó’Á1
-n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÚµš8÷éó’Á1
+===" 18 times.(Öä»Øûÿÿÿÿ8ªÑê¬Á1
+r	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñºçÆşÿÿÿÿ8ªÑê¬Á1
+m	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉĞ¶¡8ªÑê¬Á1
+r	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØïÜøÿÿÿÿ8ªÑê¬Á1
+m	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ÃìÙ8ªÑê¬Á1
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÚµš8ªÑê¬Á1
 Z
-java:S4973å"<Strings and Boxed types should be compared using "equals()".(ÈØ±Î8ûéó’Á1
-z	java:S116"^Rename this field "grupoApoio_usuarios" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–’ºæ8—êó’Á1
-o	java:S100`"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼—‚õûÿÿÿÿ8¢êó’Á1
-L	java:S106p"+Replace this use of System.out by a logger.(¡Æ¿Ëıÿÿÿÿ8ÃæÑ—Á1
-F	java:S106t"+Replace this use of System.out by a logger.(Ó¥æ8ÃæÑ—Á1
-H	java:S106„"+Replace this use of System.out by a logger.(¹îÜÇ8ÇæÑ—Á1
-H	java:S106†"+Replace this use of System.out by a logger.(äİÅ8ÇæÑ—Á1
-H	java:S106‹"+Replace this use of System.out by a logger.(Ä‹8ÈæÑ—Á1
-G	java:S106•"+Replace this use of System.out by a logger.(–¹×!8ÊæÑ—Á1
-M	java:S106"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8ÌæÑ—Á1
-M	java:S106Ÿ"+Replace this use of System.out by a logger.(‡İ—Åüÿÿÿÿ8ÌæÑ—Á1
-M	java:S106 "+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8ÌæÑ—Á1
-H	java:S106§"+Replace this use of System.out by a logger.(ƒ’€8ÍæÑ—Á1
-M	java:S106ª"+Replace this use of System.out by a logger.(Ùì†‹øÿÿÿÿ8ÎæÑ—Á1
-H	java:S106­"+Replace this use of System.out by a logger.(˜Ì’ë8ÎæÑ—Á1
-G	java:S106±"+Replace this use of System.out by a logger.(´çº8ÏæÑ—Á1
-H	java:S106¸"+Replace this use of System.out by a logger.(¶ßÃÅ8ĞæÑ—Á1
-M	java:S106¾"+Replace this use of System.out by a logger.(¡ ê¢ûÿÿÿÿ8ÑæÑ—Á1
-M	java:S106Á"+Replace this use of System.out by a logger.(º›Çÿıÿÿÿÿ8ÓæÑ—Á1
-M	java:S106Ä"+Replace this use of System.out by a logger.(ëÏüÇşÿÿÿÿ8ÔæÑ—Á1
-M	java:S106Ë"+Replace this use of System.out by a logger.(Ô¢„Æûÿÿÿÿ8ÕæÑ—Á1
-M	java:S106İ"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8ØæÑ—Á1
-M	java:S106Ş"+Replace this use of System.out by a logger.(ï¶‰üÿÿÿÿ8ØæÑ—Á1
-M	java:S106ß"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8ÙæÑ—Á1
-M	java:S106æ"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8ÚæÑ—Á1
-M	java:S106ç"+Replace this use of System.out by a logger.(ï¶‰üÿÿÿÿ8ÚæÑ—Á1
-M	java:S106è"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8ÛæÑ—Á1
-M	java:S106ï"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8ÜæÑ—Á1
-M	java:S106ğ"+Replace this use of System.out by a logger.(¬Û·½üÿÿÿÿ8ÜæÑ—Á1
-M	java:S106ñ"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8İæÑ—Á1
-M	java:S106÷"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8ŞæÑ—Á1
-H	java:S106ø"+Replace this use of System.out by a logger.(“¡–Ÿ8ŞæÑ—Á1
-M	java:S106ù"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8ŞæÑ—Á1
-M	java:S106ÿ"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8àæÑ—Á1
-G	java:S106€"+Replace this use of System.out by a logger.(§‚®K8àæÑ—Á1
-M	java:S106"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8àæÑ—Á1
-M	java:S106‡"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8áæÑ—Á1
-M	java:S106ˆ"+Replace this use of System.out by a logger.(¾“Ğªıÿÿÿÿ8âæÑ—Á1
-M	java:S106‰"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8âæÑ—Á1
-M	java:S106"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8âæÑ—Á1
-M	java:S106"+Replace this use of System.out by a logger.(‡İ—Åüÿÿÿÿ8âæÑ—Á1
-M	java:S106‘"+Replace this use of System.out by a logger.(Öä»Øûÿÿÿÿ8ãæÑ—Á1
-H	java:S106—"+Replace this use of System.out by a logger.(¢‹»¾8ãæÑ—Á1
-M	java:S106™"+Replace this use of System.out by a logger.(„İì“øÿÿÿÿ8ãæÑ—Á1
-M	java:S106œ"+Replace this use of System.out by a logger.(õíçœùÿÿÿÿ8äæÑ—Á1
-M	java:S106Ÿ"+Replace this use of System.out by a logger.(·¼Ó”üÿÿÿÿ8äæÑ—Á1
-H	java:S106¢"+Replace this use of System.out by a logger.(¥©Ïû8åæÑ—Á1
-M	java:S106¦"+Replace this use of System.out by a logger.(â¶—øÿÿÿÿ8åæÑ—Á1
-H	java:S106¬"+Replace this use of System.out by a logger.(´êï½8çæÑ—Á1
-H	java:S106·"+Replace this use of System.out by a logger.(šÂ´¿8çæÑ—Á1
-H	java:S106º"+Replace this use of System.out by a logger.(‰¶Ûœ8èæÑ—Á1
-H	java:S106½"+Replace this use of System.out by a logger.(‘§ñÏ8èæÑ—Á1
-M	java:S106À"+Replace this use of System.out by a logger.(¾çÎ²ûÿÿÿÿ8éæÑ—Á1
-M	java:S106Ã"+Replace this use of System.out by a logger.(û¼ŸÙşÿÿÿÿ8éæÑ—Á1
-M	java:S106Å"+Replace this use of System.out by a logger.(ŒÿÜåûÿÿÿÿ8éæÑ—Á1
-H	java:S106È"+Replace this use of System.out by a logger.(©÷‚8êæÑ—Á1
-M	java:S106Ë"+Replace this use of System.out by a logger.(áŸ²ÿÿÿÿÿ8êæÑ—Á1
-H	java:S106Î"+Replace this use of System.out by a logger.(Ş¥ûÒ8êæÑ—Á1
-H	java:S106Ø"+Replace this use of System.out by a logger.(ªğ¡Ã8ëæÑ—Á1
-M	java:S106Ş"+Replace this use of System.out by a logger.(í‘ëÉıÿÿÿÿ8ìæÑ—Á1
-H	java:S106á"+Replace this use of System.out by a logger.(şÍŠë8íæÑ—Á1
-M	java:S106ä"+Replace this use of System.out by a logger.(™£ãùûÿÿÿÿ8íæÑ—Á1
-M	java:S106é"+Replace this use of System.out by a logger.(‰ÈîÑüÿÿÿÿ8îæÑ—Á1
-M	java:S106ñ"+Replace this use of System.out by a logger.(Œõ¹Øüÿÿÿÿ8îæÑ—Á1
+java:S4973í"<Strings and Boxed types should be compared using "equals()".(ÈØ±Î8ºÑê¬Á1
+z	java:S116"^Rename this field "grupoApoio_usuarios" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–’ºæ8ùÑê¬Á1
+o	java:S100`"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼—‚õûÿÿÿÿ8ˆÒê¬Á1

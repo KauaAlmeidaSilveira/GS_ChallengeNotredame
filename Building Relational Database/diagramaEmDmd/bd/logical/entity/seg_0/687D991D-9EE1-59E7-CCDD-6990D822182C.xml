@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F178BF19-812A-C5F1-F756-28F50A7CCE82" name="GrupoDeApoio">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="687D991D-9EE1-59E7-CCDD-6990D822182C" name="EnderecoGrupoDeApoio">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 00:17:27 UTC</createdTime>
+<createdTime>2023-11-24 00:23:09 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID_GrupoDeApoio" id="944EC33A-B94D-ED2F-B280-A4BA36D88B98">
+<Attribute name="ID_EnderecoGrupoDeApoio" id="01480C04-31BF-FFA5-2D1D-680C61DD0CBA">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 00:17:49 UTC</createdTime>
+<createdTime>2023-11-24 00:23:17 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
@@ -28,9 +28,9 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Nome" id="5420E08D-DF50-F3EA-0093-67EF6ACE06E3">
+<Attribute name="Rua" id="D8FA0139-5E1F-4923-B197-ABA7925857FA">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 00:19:06 UTC</createdTime>
+<createdTime>2023-11-24 00:23:30 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
@@ -41,22 +41,9 @@
 <dataTypeSize>100 CHAR</dataTypeSize>
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Telefone" id="E826B2E5-A019-CB00-F727-8A0FA9930A31">
+<Attribute name="Cidade" id="F4417703-F3EB-1D3C-8452-5A6A0434C562">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 00:19:54 UTC</createdTime>
-<ownerDesignName>bd</ownerDesignName>
-<engineerTo>
-<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15 CHAR</dataTypeSize>
-<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="publicoAlvo" id="8B705B6F-15C1-50DE-3EBB-4036B24AAE66">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 00:20:56 UTC</createdTime>
+<createdTime>2023-11-24 00:23:43 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
@@ -67,9 +54,9 @@
 <dataTypeSize>100 CHAR</dataTypeSize>
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="descricao" id="D51CD5B8-2B8A-BE7E-4C95-54AC7E0BC521">
+<Attribute name="CEP" id="7A6834F5-E5EF-0C21-4065-AE67DD501872">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-26 02:57:14 UTC</createdTime>
+<createdTime>2023-11-24 00:23:54 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
@@ -77,36 +64,34 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255 CHAR</dataTypeSize>
-<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Endereco" id="E7769F06-DEB8-895C-5DDB-19E75189DB6B">
+<Attribute name="Pais" id="F7BCA9A7-8822-8E87-3AF9-E5C12EF21ABA">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 19:55:51 UTC</createdTime>
-<generatorID>0457DA42-8798-B802-EB8D-B8992A255C36</generatorID>
+<createdTime>2023-11-24 00:24:25 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
 </engineerTo>
-<referedAttribute>01480C04-31BF-FFA5-2D1D-680C61DD0CBA</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="C7BC0251-2A5D-BD55-3E39-0C7F536BC0EE" name="GrupoDeApoio PK">
+<identifier id="831D77D5-4C55-2BB1-E8FC-107E49295E87" name="Endereco PK">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 00:19:06 UTC</createdTime>
+<createdTime>2023-11-24 00:23:30 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>944EC33A-B94D-ED2F-B280-A4BA36D88B98</attributeRef>
+<attributeRef>01480C04-31BF-FFA5-2D1D-680C61DD0CBA</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

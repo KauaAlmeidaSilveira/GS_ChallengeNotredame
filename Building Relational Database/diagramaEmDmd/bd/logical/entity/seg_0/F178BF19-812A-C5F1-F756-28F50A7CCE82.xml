@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="50FCF05B-8C1F-DE31-5724-BF02EFA56A79" name="Usuario">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F178BF19-812A-C5F1-F756-28F50A7CCE82" name="GrupoDeApoio">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-23 23:49:22 UTC</createdTime>
+<createdTime>2023-11-24 00:17:27 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
@@ -15,23 +15,22 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="CPF_Usuario" id="F3451185-7905-23E9-547B-83CD79EDCC3A">
+<Attribute name="ID_GrupoDeApoio" id="944EC33A-B94D-ED2F-B280-A4BA36D88B98">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-23 23:50:08 UTC</createdTime>
-<commentInRDBMS><![CDATA[999.999.999-99]]></commentInRDBMS>
+<createdTime>2023-11-24 00:17:49 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>14 CHAR</dataTypeSize>
-<ownDataTypeParameters>14 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Nome" id="1C8136B8-6BF7-D35E-96F9-771040709085">
+<Attribute name="Nome" id="5420E08D-DF50-F3EA-0093-67EF6ACE06E3">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-23 23:49:35 UTC</createdTime>
+<createdTime>2023-11-24 00:19:06 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
@@ -42,9 +41,9 @@
 <dataTypeSize>100 CHAR</dataTypeSize>
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Genero" id="663D843B-2EF8-1BF9-E4A3-81340EFD2911">
+<Attribute name="Telefone" id="E826B2E5-A019-CB00-F727-8A0FA9930A31">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-23 23:51:14 UTC</createdTime>
+<createdTime>2023-11-24 00:19:54 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
@@ -52,27 +51,39 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50 CHAR</dataTypeSize>
-<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Convenio" id="F4762017-43F2-8FB3-0E1E-824F17764667">
+<Attribute name="publicoAlvo" id="8B705B6F-15C1-50DE-3EBB-4036B24AAE66">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-23 23:52:06 UTC</createdTime>
+<createdTime>2023-11-24 00:20:56 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>30 CHAR</dataTypeSize>
-<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_Endereco" id="548D090B-5265-5399-4522-DE34AB996336">
+<Attribute name="descricao" id="D51CD5B8-2B8A-BE7E-4C95-54AC7E0BC521">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 19:55:29 UTC</createdTime>
-<generatorID>5BD9DEF0-529E-2C07-7683-400D704E231A</generatorID>
+<createdTime>2023-11-26 02:57:14 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_EnderecoGrupoDeApoio" id="E7769F06-DEB8-895C-5DDB-19E75189DB6B">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-24 19:55:51 UTC</createdTime>
+<generatorID>0457DA42-8798-B802-EB8D-B8992A255C36</generatorID>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
@@ -86,16 +97,16 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="144843C9-D717-B161-40A5-89A31797FAB2" name="Usuario PK">
+<identifier id="C7BC0251-2A5D-BD55-3E39-0C7F536BC0EE" name="GrupoDeApoio PK">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-23 23:50:04 UTC</createdTime>
+<createdTime>2023-11-24 00:19:06 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>F3451185-7905-23E9-547B-83CD79EDCC3A</attributeRef>
+<attributeRef>944EC33A-B94D-ED2F-B280-A4BA36D88B98</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

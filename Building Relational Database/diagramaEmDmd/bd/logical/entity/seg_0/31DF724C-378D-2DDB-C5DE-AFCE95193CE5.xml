@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2DB1F05C-8AB3-C758-15F3-6F03F1F2B272" name="GrupoApoio_Usuario">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="31DF724C-378D-2DDB-C5DE-AFCE95193CE5" name="EnderecoUsuario">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 19:57:41 UTC</createdTime>
+<createdTime>2023-11-29 11:56:56 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID_GrupoApoioUsuario" id="C4A974BB-2216-1796-B9BD-CEAE77006EDF">
+<Attribute name="ID_EnderecoUsuario" id="9FDD0426-5E4F-1CC2-268D-A0EE68AFFA61">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 20:07:55 UTC</createdTime>
+<createdTime>2023-11-29 11:56:56 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
@@ -28,39 +28,9 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_GrupoDeApoio" id="1042080C-8D4D-3D0B-E30F-3EE3B5A1449C">
+<Attribute name="Rua" id="12E83131-895D-BB2C-B4C5-5F7466585612">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 19:57:57 UTC</createdTime>
-<generatorID>A04714C6-D21B-363F-B085-0CB85078C1B9</generatorID>
-<ownerDesignName>bd</ownerDesignName>
-<engineerTo>
-<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
-</engineerTo>
-<referedAttribute>944EC33A-B94D-ED2F-B280-A4BA36D88B98</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="CPF_Usuario" id="5D2DE022-1598-800D-CF32-49BCBAB4F157">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 19:58:08 UTC</createdTime>
-<generatorID>0D077720-6690-6ACC-4493-9A916277E21E</generatorID>
-<ownerDesignName>bd</ownerDesignName>
-<engineerTo>
-<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
-</engineerTo>
-<referedAttribute>F3451185-7905-23E9-547B-83CD79EDCC3A</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>14 CHAR</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Status" id="510F15BA-F11E-3BE5-74CB-D9318666DEC6">
-<createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 20:09:19 UTC</createdTime>
+<createdTime>2023-11-29 11:56:56 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
@@ -68,21 +38,60 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50 CHAR</dataTypeSize>
-<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cidade" id="5437870A-C95A-7945-D3AA-CE86A3E7F860">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-29 11:56:56 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CEP" id="5A1146FC-E58E-36BF-E583-9A4343DED85A">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-29 11:56:56 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Pais" id="DB7C401C-575E-DDFD-E69D-03174DDC3A28">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-29 11:56:56 UTC</createdTime>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="E4271656-294C-F411-66C7-2D4CA07C7CB5" name="GrupoApoio_Usuario PK">
+<identifier id="90D23180-700F-3C5C-272B-ACEAE2201407" name="Endereco PK">
 <createdBy>Kauã</createdBy>
-<createdTime>2023-11-24 20:08:19 UTC</createdTime>
+<createdTime>2023-11-29 11:56:56 UTC</createdTime>
 <ownerDesignName>bd</ownerDesignName>
 <engineerTo>
 <item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>C4A974BB-2216-1796-B9BD-CEAE77006EDF</attributeRef>
+<attributeRef>9FDD0426-5E4F-1CC2-268D-A0EE68AFFA61</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

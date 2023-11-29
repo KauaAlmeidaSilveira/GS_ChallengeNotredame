@@ -83,6 +83,21 @@
 <dataTypeSize>100 CHAR</dataTypeSize>
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ID_Conta" id="BA08784C-9261-09C9-60E0-A5522CAE1EA8">
+<createdBy>Kauã</createdBy>
+<createdTime>2023-11-29 12:00:29 UTC</createdTime>
+<generatorID>2B5E211A-2A57-BFB5-A659-33FAFD4FCF1D</generatorID>
+<ownerDesignName>bd</ownerDesignName>
+<engineerTo>
+<item key="67F5932E-DFEF-7160-8818-36AA51B98B65" value="true"/>
+</engineerTo>
+<referedAttribute>FB4C49ED-4A4F-0209-6E46-0D162AB1E330</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="83887EB9-DB64-37CA-3D4D-85A07875A72E" name="MarcasParceiras PK">

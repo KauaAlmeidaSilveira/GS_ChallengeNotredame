@@ -1,0 +1,598 @@
+{
+  "intents": [
+    {
+      "intent": "agradecimento",
+      "examples": [
+        {
+          "text": "legal, valeu"
+        },
+        {
+          "text": "mto obrigado"
+        },
+        {
+          "text": "muito obrigado"
+        },
+        {
+          "text": "obrigada"
+        },
+        {
+          "text": "obrigado"
+        },
+        {
+          "text": "Obrigado pela ajuda"
+        },
+        {
+          "text": "tamo junto"
+        },
+        {
+          "text": "tmj"
+        },
+        {
+          "text": "vlw"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "cadastrar",
+      "examples": [
+        {
+          "text": "cadastrar"
+        },
+        {
+          "text": "como crio uma conta"
+        },
+        {
+          "text": "não tenho uma conta"
+        },
+        {
+          "text": "preciso criar uma conta"
+        },
+        {
+          "text": "quero criar uma conta"
+        },
+        {
+          "text": "quero me cadastrar"
+        },
+        {
+          "text": "Quero realizar um cadastro"
+        }
+      ],
+      "description": "Intenções p/ cadastrar"
+    },
+    {
+      "intent": "DST",
+      "examples": [
+        {
+          "text": "como prevenir de dst"
+        },
+        {
+          "text": "dst"
+        },
+        {
+          "text": "oque é dst"
+        },
+        {
+          "text": "tenho dst"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "gruposDeApoio",
+      "examples": [
+        {
+          "text": "grupo de apoio"
+        },
+        {
+          "text": "me fala sobre os grupos"
+        },
+        {
+          "text": "preciso de um grupo de apoio"
+        },
+        {
+          "text": "quais grupos vcs tem ?"
+        },
+        {
+          "text": "qual grupo de apoio me recomendao"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "LGBTQIA",
+      "examples": [
+        {
+          "text": "Assexuais"
+        },
+        {
+          "text": "Bissexuais"
+        },
+        {
+          "text": "Gays"
+        },
+        {
+          "text": "Intersex"
+        },
+        {
+          "text": "Lésbicas"
+        },
+        {
+          "text": "LGBTQIA+"
+        },
+        {
+          "text": "o que é LGBTQIA+"
+        },
+        {
+          "text": "Queer"
+        },
+        {
+          "text": "Transgêneros"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "cargo",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "cargo",
+          "patterns": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "\\b[A-Za-z0-9._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,}\\b"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "nome",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "nome",
+          "patterns": []
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "senha",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "senha",
+          "patterns": [
+            "\\d{4}"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "sim-nao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "nao",
+          "synonyms": [
+            "n, não, nagativo, nem, nao"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "sim",
+          "synonyms": [
+            "sim, s, ss, ok, bora, vamos, fecho ok"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "telefone",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "telefone",
+          "patterns": [
+            "\\d{2} \\d{9}"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá, somos a CareCircle, como podemos te ajudar ?\nPodemos realizar seu cadastro, te informar sobre DST, informar sobre LGBTQIA+ e recomendar alguns grupos de apoio que podem te auxiliar."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_10_1701442857868",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Digite seu telefone: "
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_6_1701455953867",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1701455953868",
+      "previous_sibling": "handler_5_1701455953868"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_6_1701455898551",
+      "disabled": true,
+      "event_name": "focus",
+      "dialog_node": "handler_1_1701471780083"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1701455915581",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email",
+      "event_name": "input",
+      "dialog_node": "handler_2_1701455915595"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Digite um pin de 4 números: "
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_4_1701458017187",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1701458017187",
+      "previous_sibling": "handler_3_1701458017187"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1701458017187",
+      "context": {
+        "senha": "@senha.literal"
+      },
+      "conditions": "@senha",
+      "event_name": "input",
+      "dialog_node": "handler_3_1701458017187"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1701455953867",
+      "context": {
+        "telefone": "@telefone.literal"
+      },
+      "conditions": "@telefone",
+      "event_name": "input",
+      "dialog_node": "handler_5_1701455953868"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Digite seu email: "
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_9_1701455915581",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1701455915595",
+      "previous_sibling": "handler_2_1701455915595"
+    },
+    {
+      "type": "standard",
+      "title": "Agradecimento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Fico feliz em te ajudar, até mais..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#agradecimento",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_10_1701442857868",
+      "previous_sibling": "node_1_1701477306288"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Perfeito, cadastro realizado com sucesso !!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "<? context.clear() ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1701455898551",
+      "conditions": "@sim-nao:sim",
+      "dialog_node": "node_10_1701458310176",
+      "previous_sibling": "response_3_1701471588877"
+    },
+    {
+      "type": "standard",
+      "title": "DST",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Doenças Sexualmente Transmissíveis (DST)\n"
+              },
+              {
+                "text": "Definição:\n\nDSTs são infecções transmitidas através do contato sexual, podendo afetar qualquer pessoa, independentemente de gênero, idade ou orientação sexual.\n"
+              },
+              {
+                "text": "Prevenção:\n\nO uso consistente de preservativos é fundamental.\nPráticas de fidelidade mútua e exames regulares ajudam a prevenir a transmissão.\nVacinas, quando disponíveis, são eficazes em determinadas DSTs.\n"
+              },
+              {
+                "text": "Sintomas:\n\nFeridas genitais, corrimento anormal, coceira e dor ao urinar são sinais comuns.\nMuitas DSTs podem ser assintomáticas, destacando a importância de exames regulares.\n"
+              },
+              {
+                "text": "Diagnóstico e Tratamento:\n\nProcurar assistência médica é crucial ao suspeitar de uma DST.\nTestes específicos e tratamento adequado são essenciais para interromper a propagação e evitar complicações.\n"
+              },
+              {
+                "text": "Diagnóstico e Tratamento:\n\nProcurar assistência médica é crucial ao suspeitar de uma DST.\nTestes específicos e tratamento adequado são essenciais para interromper a propagação e evitar complicações.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#DST",
+      "dialog_node": "node_10_1701474087928",
+      "previous_sibling": "node_6_1701455898551"
+    },
+    {
+      "type": "standard",
+      "title": "LGBTQIA+",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O termo LGBTQIA+ é um acrônimo que representa uma ampla gama de identidades relacionadas à orientação sexual e identidade de gênero. Cada letra no acrônimo representa uma categoria específica, com o sinal de \"+\" sendo utilizado para incluir identidades que não estão explicitamente mencionadas. Aqui estão algumas das principais categorias representadas:\n\nL - Lésbicas:\nMulheres que são atraídas emocional, romântica e/ou sexualmente por outras mulheres.\n\nG - Gays:\nHomens que são atraídos emocional, romântica e/ou sexualmente por outros homens.\n\nB - Bissexuais:\nPessoas que são atraídas emocional, romântica e/ou sexualmente por mais de um gênero.\n\nT - Transgêneros:\nIndivíduos cuja identidade de gênero difere daquele que lhes foi atribuído ao nascer. Por exemplo, uma pessoa designada como homem ao nascer, mas que identifica-se como mulher.\n\nQ - Queer ou Questioning:\n\"Queer\" é um termo inclusivo que abrange diversas identidades fora das categorias tradicionais. \"Questioning\" refere-se a pessoas que estão explorando sua própria identidade de gênero ou orientação sexual.\n\nI - Intersex:\nPessoas que nascem com características biológicas que não se encaixam nas definições típicas de \"masculino\" ou \"feminino\".\n\nA - Assexuais:\nIndivíduos que experimentam uma falta de atração sexual para com qualquer gênero, ou que têm uma atração sexual significativamente menor do que a média.\nAlém disso, o sinal de \"+\" reconhece a diversidade e a inclusão de outras identidades não mencionadas explicitamente no acrônimo.\n\nÉ importante notar que a compreensão e o respeito às diversas identidades dentro da comunidade LGBTQIA+ são essenciais para promover uma sociedade mais inclusiva e acolhedora para todas as pessoas, independentemente de sua orientação sexual ou identidade de gênero.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#LGBTQIA",
+      "dialog_node": "node_1_1701477306288",
+      "previous_sibling": "node_5_1701474442089"
+    },
+    {
+      "type": "standard",
+      "title": "Grupos de Apoio",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Certo, vale lembrar que visto nosso propósito como a CareCircle, recomendamos varios grupos de fornecem apoio a participantes do grupo LGBTQIA+"
+              },
+              {
+                "text": "Esses são os grupos:\n\nPFLAG (EUA):\n\nPFLAG é a primeira e maior organização de apoio a pais, familiares e amigos de pessoas LGBTQIA+. Eles oferecem recursos, informação e encontros locais para construir comunidades de apoio.\n\nThe Trevor Project (Internacional):\n\nThe Trevor Project é uma organização que oferece serviços de prevenção ao suicídio para jovens LGBTQIA+. Eles fornecem uma linha de apoio telefônico, chat online e recursos educacionais.\n\nStonewall (Reino Unido):\n\nStonewall é uma organização britânica que trabalha pela igualdade LGBTQIA+. Eles oferecem recursos, aconselhamento e apoio para indivíduos e empresas.\nGLAAD (EUA):\n\nGLAAD é uma organização de mídia que se dedica a promover representações positivas e inclusivas da comunidade LGBTQIA+ na mídia. Eles também fornecem recursos educacionais e de advocacia.\n\nILGA World (Internacional):\n\nA International Lesbian, Gay, Bisexual, Trans and Intersex Association (ILGA) é uma federação global de organizações que lutam pelos direitos humanos da comunidade LGBTQIA+. Eles trabalham para promover a igualdade e combater a discriminação em todo o mundo.\n\nSAGE (EUA):\n\nSAGE é uma organização que se concentra em melhorar a qualidade de vida dos idosos LGBTQIA+. Eles oferecem serviços de apoio, recursos e oportunidades de socialização.\n\nAssociação da Parada do Orgulho LGBT de São Paulo (Brasil):\n\nA Parada do Orgulho LGBT de São Paulo é uma das maiores do mundo. Além do evento anual, eles também estão envolvidos em atividades ao longo do ano para promover a inclusão e combater a discriminação."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#gruposDeApoio",
+      "dialog_node": "node_5_1701474442089",
+      "previous_sibling": "node_10_1701474087928"
+    },
+    {
+      "type": "frame",
+      "title": "Cadastrar",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Apenas para conferir, seu email é $email, sua senha $senha e seu telefone $telefone, correto ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#cadastrar",
+      "dialog_node": "node_6_1701455898551",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Apenas para conferir, seu email é $email, sua senha $senha e seu telefone $telefone, correto ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1701455898551",
+      "disabled": true,
+      "conditions": "$email = true",
+      "dialog_node": "response_3_1701471588877",
+      "previous_sibling": "handler_1_1701471780083"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1701455898551",
+      "variable": "$senha",
+      "dialog_node": "slot_4_1701458017187",
+      "previous_sibling": "slot_9_1701455915581"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1701455898551",
+      "variable": "$telefone",
+      "dialog_node": "slot_6_1701455953867",
+      "previous_sibling": "slot_4_1701458017187"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1701455898551",
+      "variable": "$email",
+      "dialog_node": "slot_9_1701455915581",
+      "previous_sibling": "node_10_1701458310176"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "generative_ai": {
+      "slot_filling": {
+        "enabled": false
+      }
+    },
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores",
+      "use_connect_to_support_prompt": "Connect to support",
+      "single_answer_clarification_prompt": "Something else"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "",
+  "name": "GS_Dúvidas sobre DST e Cadastro na plataforma"
+}

@@ -1,0 +1,21 @@
+-- Telegram --
+Nome: fiapChallengeBot
+Token: 6941384835:AAGd9Y84rUEALOZc0QsCmxLl7txw6pcoHwM
+
+-- Watson Assintant --
+
+API KEY: P4243E4w2K1pzKkiHl3jZWdQs-Q7y_iUtREm2G8HG6g4
+URL: https://api.us-south.assistant.watson.cloud.ibm.com/instances/57c0e96f-c276-4671-8372-b5e5bff52b36
+
+-- Skill --
+
+ASSISTENT ID: 06ec964d-ac19-418f-aa0d-09b4c2e7dd2e
+
+-- TTS --
+API KEY: PWoqNmfjaHBvgXeI5bD8h9rdD44AfcDX-lxhInxgiTaa
+URL: https://api.au-syd.text-to-speech.watson.cloud.ibm.com/instances/3551c992-3cd0-473b-839f-31666a553218
+
+-- STT --
+
+API KEY: XHEUlynqqXbHD6bEatTjIp0ks4QQJcg0RlshVtD7-z2U
+URL: https://api.au-syd.speech-to-text.watson.cloud.ibm.com/instances/fe4e742e-d843-419a-a26a-1c6219811dbe
